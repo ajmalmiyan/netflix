@@ -1,6 +1,6 @@
-
+import Jumbotron from './components/Jumbotron/'
 export default function App() {
   return (
-    <h1>Netflix</h1>
+    <Jumbotron/>
   );
 }
