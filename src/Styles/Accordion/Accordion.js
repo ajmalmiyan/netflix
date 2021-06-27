@@ -33,7 +33,7 @@ margin-bottom: 40px;
 export const Item = styled.div`
   color: white;
   margin-bottom: 10px;
-
+  max-width: 670px;
   &::first-of-type {
     margin-top: 3em;
   }
@@ -60,4 +60,19 @@ img{
 }
 `;
 
-export const Body = styled.div``;
+export const Body = styled.div`
+max-height: 1200px;
+transition: max-height 0.5s cubic-bezier(0.5,0,0.1,1);
+font-size: 26px;
+font-weight: normal;
+line-height: normal;
+background: #303030;
+padding: 0.8em 2.2em 0.8em 1.2em;
+white-space: pre-wrap;
+user-select: none;
+
+@media (max-width:600px){
+  font-size: 16px;
+  line-height: 22px;
+}
+`;
