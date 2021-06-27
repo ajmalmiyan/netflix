@@ -1,13 +1,13 @@
+import Jumbotron from './Components/Jumbotron/Jumbotron';
 import { AccordionContainer } from './Containers/Accordion';
-import FooterContainer from './Containers/Footer';
-import JumbotronContainer from './Containers/Jumbotron';
+import Footer from './Components/Footer/Footer';
 
 export default function App() {
   return (
     <>
-    <JumbotronContainer/>
+    <Jumbotron/>
     <AccordionContainer/>
-    <FooterContainer/>
+    <Footer/>
     </>
   );
 }
