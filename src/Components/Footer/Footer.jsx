@@ -8,40 +8,45 @@ import {
   Link,
   Select
 } from "../../Styles/Footer/Footer";
-function Footer({ children, ...restProps }) {
-  return <Container {...restProps}>{children}</Container>;
-}
 
-Footer.Row = function FooterRow({ children, ...restProps }) {
-  return <Row {...restProps}>{children}</Row>;
-};
-
-Footer.Column = function FooterColumn({ children, ...restProps }) {
-  return <Column {...restProps}>{children}</Column>;
-};
-
-Footer.Link = function FooterLink({ children, ...restProps }) {
-  return <Link {...restProps}>{children}</Link>;
-};
-
-Footer.Title = function FooterTitle({ children, ...restProps }) {
-  return <Title {...restProps}>{children}</Title>;
-};
-
-Footer.Text = function FooterText({ children, ...restProps }) {
-  return <Text {...restProps}>{children}</Text>;
-};
-
-Footer.Text = function FooterText({ children, ...restProps }) {
-  return <Text {...restProps}>{children}</Text>;
-};
-
-Footer.Break = function FooterBreak({ children, ...restProps }) {
-  return <Break {...restProps}>{children}</Break>;
-};
-
-Footer.Select = function FooterSelect({children, ...restProps}){
-  return <Select {...restProps}>{children}</Select>
+function Footer() {
+  return (
+    <Container>
+      <Title>Questions? Contact us!</Title>
+      <Break />
+      <Row>
+        <Column>
+          <Link href="#">FAQ</Link>
+          <Link href="#">Investor Relations</Link>
+          <Link href="#">Privacy</Link>
+          <Link href="#">Speed Test</Link>
+        </Column>
+        <Column>
+          <Link href="#">Help Centre</Link>
+          <Link href="#">Jobs</Link>
+          <Link href="#">Cookie Preferences</Link>
+          <Link href="#">Legal Notices</Link>
+        </Column>
+        <Column>
+          <Link href="#">Account</Link>
+          <Link href="#">Ways to Watch</Link>
+          <Link href="#">Corporate Information</Link>
+          <Link href="#">Netflix Originals</Link>
+        </Column>
+        <Column>
+          <Link href="#">Media Centre</Link>
+          <Link href="#">Terms of Use</Link>
+          <Link href="#">Contact Us</Link>
+        </Column>
+      </Row>
+      <Break/>
+      <Select value="Language">
+            <option>English</option>
+            <option>Hindi</option>
+          </Select>
+          <Text>Netflix India</Text>
+    </Container>
+  );
 }
 
 export default Footer;
