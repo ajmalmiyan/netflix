@@ -1,3 +1,4 @@
+import jumboData from "../../Fixtures/jumbo.json";
 import {
   Inner,
   Container,
@@ -8,34 +9,22 @@ import {
   Item,
 } from "../../Styles/Jumbotron/Jumbotron";
 
-export default function Jumbotron({
-  children,
-  direction = "row",
-  ...restProps
-}) {
+export default function Jumbotron() {
   return (
-    <Item {...restProps}>
-      <Inner direction={direction}>{children}</Inner>
-    </Item>
+    <Container>
+      {jumboData.map((item) => (
+        <Item key={item.id}>
+          <Inner direction={item.direction}>
+            <Pane>
+              <Title>{item.title}</Title>
+              <SubTtile>{item.subTitle}</SubTtile>
+            </Pane>
+            <Pane>
+              <Image src={item.image} alt={item.alt} />
+            </Pane>
+          </Inner>
+        </Item>
+      ))}
+    </Container>
   );
 }
-
-Jumbotron.Container = function JumbotronContainer({ children, ...restProps }) {
-  return <Container {...restProps}>{children}</Container>;
-};
-
-Jumbotron.Title = function JumbotronTitle({ children, ...restProps }) {
-  return <Title {...restProps}>{children}</Title>;
-};
-
-Jumbotron.SubTtile = function JumbotronSubTtile({ children, ...restProps }) {
-  return <SubTtile {...restProps}>{children}</SubTtile>;
-};
-
-Jumbotron.Image = function JumbotronImage({ ...restProps }) {
-  return <Image {...restProps} />;
-};
-
-Jumbotron.Pane = function JumbotronPane({ children, ...restProps }) {
-  return <Pane {...restProps}>{children}</Pane>;
-};
